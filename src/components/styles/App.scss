@@ -1,0 +1,139 @@
+@import 'resets';
+@import 'footer';
+@import 'about';
+
+.App {
+    padding-top: 10vh;
+
+    &__header {
+        width: 100%;
+        height: 10vh;
+        background-color: #f4f4f4;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 10rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+        .logo {
+            cursor: pointer;
+            h1 {
+                font-size: 40px;
+                letter-spacing: 0.1rem;
+                color: #212121;
+
+                span {
+                    color: palevioletred;
+                }
+            }
+        }
+
+        .nav {
+            ul {
+                list-style-type: none;
+                width: 500px;
+                display: flex;
+                align-items: center;
+            }
+
+            a {
+                margin: 0 1rem;
+                font-size: 18px;
+                color: #212121;
+                font-weight: 300;
+
+                &:last-of-type {
+                    margin-left: 5rem;
+                    display: flex;
+                    align-items: center;
+
+                    .cart_total {
+                        margin-left: 0.5rem;
+                    }
+                }
+            }
+            .nav-links {
+                position: relative;
+                transition: 0.3s all linear;
+                &:hover {
+                    color: palevioletred;
+
+                    &::after {
+                        width: 100%;
+                    }
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: -5px;
+                    background-color: palevioletred;
+                    width: 0%;
+                    height: 3px;
+                    transition: 0.3s all linear;
+                }
+            }
+        }
+    }
+
+    .home {
+        .heading {
+            background-image: url('https://images.unsplash.com/photo-1546213290-e1b492ab3eee?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80');
+            height: 40vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            padding: 2rem 8rem;
+            color: #fff;
+
+            h2 {
+                font-size: 45px;
+                font-weight: 900;
+                margin-bottom: 1rem;
+            }
+
+            a {
+                font-size: 35px;
+                text-decoration: underline;
+                color: #fff;
+
+                &:hover {
+                    color: #6fbbd3
+                }
+            }
+        }
+
+        .deals {
+            margin-top: 5rem;
+
+            &__title {
+                text-align: center;
+                font-size: 40px;
+                letter-spacing: 0.2rem;
+                font-weight: 400;
+            }
+        }
+
+        .shop-at_image {
+            background-image: url('https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            h3 {
+                font-size: 35px;
+                color: #f4f4f4;
+                letter-spacing: 0.1rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,73 @@
+.footer {
+    background-color: #161414;
+    height: 80vh;
+    position: relative;
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        height: 100%;
+    }
+
+    .footer-left, .footer-right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #f4f4f4;
+        justify-content: center;
+        height: 100%;
+    }
+
+    .footer-left {
+        .info > div{
+            font-size: 30px;
+            text-align: center;
+            margin: 3rem 0;
+
+            p {
+                margin: 0.5rem 0;
+            }
+
+            .icon {
+                font-size: 50px;
+            }
+        }
+    }
+
+    .footer-right {
+        .work-hours {
+            margin-bottom: 2rem;
+            p {
+                font-size: 20px;
+                margin: 1rem 0;
+                text-align: center;
+            }
+        }
+        a {
+            margin: 3rem 0;
+            display: block;
+            color: #f4f4f4;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.3s linear all;
+
+            .icon {
+                font-size: 30px;
+            }
+
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+    
+    .made-by {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #f4f4f4;
+        font-size: 18px;
+        bottom: 1rem;
+        letter-spacing: 0.1rem;  
+    }
+}
