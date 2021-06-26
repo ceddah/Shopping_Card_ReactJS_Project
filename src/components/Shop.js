@@ -2,8 +2,6 @@ import React from 'react'
 import {useGlobalContext} from '../context';
 import { Link } from 'react-router-dom';
 import StarIcon from '@material-ui/icons/Star';
-import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
-import FavoriteIcon from '@material-ui/icons/Favorite';
 
 const Shop = () => {
     const {shop} = useGlobalContext();

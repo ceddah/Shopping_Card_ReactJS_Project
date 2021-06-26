@@ -7,7 +7,7 @@ import StarIcon from '@material-ui/icons/Star';
 
 const ItemDetails = () => {
     const {id} = useParams();
-    const {shop} = useGlobalContext();
+    const {shop,addItemToCart} = useGlobalContext();
     const [itemRating,setItemRating] = useState(null);
 
     const currentItem = shop.find(item => item.id === +id);
@@ -48,7 +48,7 @@ const ItemDetails = () => {
                 <h5 className="preview-price">€ {currentItem.price}</h5>
                 <p className="preview-desc">{currentItem.description}</p>
                 <div className="btn-container">
-                    <button className="btn add-to-cart">
+                    <button onClick={() => addItemToCart(currentItem.id)} className="btn add-to-cart">
                         <ShoppingBasketIcon className="icon" /> 
                         Add to Cart
                     </button>

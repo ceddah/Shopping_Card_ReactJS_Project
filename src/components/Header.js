@@ -1,8 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
+import {useGlobalContext} from '../context';
 
 const Header = () => {
+    const {cart} = useGlobalContext();
+
     return (
         <header className="App__header">
             <div className="logo">
@@ -15,7 +18,7 @@ const Header = () => {
                     <Link className="nav-links" to="/about_us">About Us</Link>
                     <Link to="/cart">
                         <ShoppingBasketIcon />
-                        <p className="cart_total">0</p>
+                        <p className="cart_total">{cart.length}</p>
                     </Link>
                 </ul>
             </nav>

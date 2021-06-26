@@ -4,8 +4,8 @@ import AddIcon from '@material-ui/icons/Add';
 import RemoveIcon from '@material-ui/icons/Remove';
 
 const Cart = () => {
-    const {cart} = useGlobalContext();
-
+    const {cart,removeItemFromCart} = useGlobalContext();
+    //CHECKOUT Button / Clear Cart BTN
     const renderCartItems = () => {
         return cart.map(item => {
             return (
@@ -22,7 +22,7 @@ const Cart = () => {
                             <RemoveIcon className="control-icon remove" />
                         </button>
                     </div>
-                    <button className="remove-item">Remove Item</button>
+                    <button onClick={() => removeItemFromCart(item.id)} className="remove-item">Remove Item</button>
                 </article>
             )
         })
