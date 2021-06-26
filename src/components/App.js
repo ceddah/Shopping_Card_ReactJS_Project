@@ -12,7 +12,7 @@ import Shop from './Shop';
 
 const App = () => {
     return (
-        <BrowserRouter>
+        <BrowserRouter basename="/Shopping_Card_ReactJS_Project">
             <div className="App">
                 <Header />
                 <Switch>
