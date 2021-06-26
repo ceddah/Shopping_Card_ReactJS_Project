@@ -1,0 +1,95 @@
+.cart {
+    width: 70%;
+    margin: 0 auto;
+
+    &__title {
+        padding: 5rem 0 3rem;
+        border-bottom: 1px solid #555;
+        text-align: center;
+        font-size: 45px;
+        font-weight: 400;
+        letter-spacing: 0.1rem;
+    }
+
+    &__section {
+        padding: 4rem 0;
+
+        .empty-notice {
+            font-size: 35px;
+            text-align: center;
+            letter-spacing: 0.1rem;
+            font-weight: 400;
+        }
+
+        .total {
+            text-align: right;
+            font-size: 18px;
+            font-weight: 400;
+            letter-spacing: 0.1rem;
+            color: #353434;
+        }
+        
+        .cart-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 3rem;
+
+            img {
+                height: 100px;
+                width: 80px;
+                border: 1px solid #ccc;
+            }
+
+            &__title {
+                font-weight: 400;
+                letter-spacing: 0.1rem;
+            }
+
+            &__price {
+                font-weight: 700;
+            }
+
+            &__amount {
+                display: flex;
+                align-items: center;
+
+                .cart-item__quantity {
+                    font-size: 18px;
+                    margin: 0 1rem;
+                }
+
+                button {
+                    outline: none;
+                    border: none;
+                    background-color: transparent;
+                    cursor: pointer;
+                }
+
+                .control-icon {
+                    &.add:hover {
+                        color: #478778;
+                    }
+                    &.remove:hover {
+                        color: #E35335;
+                    }
+                }
+            }
+
+            .remove-item {
+                background-color: #E35335;
+                border: none;
+                outline: none;
+                padding: 8px 24px;
+                color: #fff;
+                border-radius: 4px;
+                font-size: 14px;
+                cursor: pointer;
+            
+                &:active {
+                    transform: scale(0.97);
+                }
+            }
+        }
+    }
+}
