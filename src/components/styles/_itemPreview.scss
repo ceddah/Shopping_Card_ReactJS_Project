@@ -1,0 +1,107 @@
+.item-preview {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 3rem 5rem;
+    position: relative;
+
+    &__image {
+        width: 550px;
+        height: 700px;
+        position: relative;
+        
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .discount-tag {
+            position: absolute;
+            left: 0;
+            top: 100px;
+            color: #fff;
+            font-weight: 700;
+            padding: 0.5rem 1rem;
+            font-size: 18px;
+            border-top-right-radius: 7px;
+            border-bottom-right-radius: 7px;
+
+            &.high {
+               background-color: #E35335;
+            }
+            &.medium {
+                background-color: #F4BB44;
+            }
+            &.low {
+                background-color: #478778;
+            }
+            // .none {}
+        }
+    }
+
+    &__details {
+        margin-top: 2rem;
+        .company {
+            border-bottom: 2px solid #555;
+            padding-bottom: 0.5rem;
+            width: 70%;
+            font-size: 40px;
+        }
+
+        .preview-title {
+            margin: 1rem 0;
+            font-weight: 400;
+            letter-spacing: 0.1rem;
+            color: #353434;
+            font-size: 30px;
+        }
+
+        .preview-price {
+            color: #353434;
+            font-size: 25px;
+        }
+
+        .preview-desc {
+            color: #555;
+            line-height: 25px;
+            font-size: 18px;
+            margin: 2rem 0;
+        }
+
+        .btn-container {
+            display: flex;
+            align-items: center;
+
+            .btn {
+                color: #fff;
+                display: flex;
+                align-items: center;
+                background-color: rgb(48, 46, 46);
+                border: none;
+                outline: none;
+                padding: 10px 25px;
+                border-radius: 4px;
+                // width: 170px;
+                margin: 0 0.5rem;
+                font-size: 16px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #212121;
+                }
+
+                .icon {
+                    margin-right: 0.5rem;
+                }
+            }
+        }
+
+        .back-to-shop {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            text-decoration: underline;
+            font-size: 18px;
+        }
+    }
+}

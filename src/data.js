@@ -67,7 +67,7 @@ const shop = [
         description: 'Aliquam faucibus sapien nulla, vel malesuada diam volutpat sit amet. Aenean diam erat, facilisis vel placerat nec, lacinia eget urna. Phasellus leo eros, sodales sed tellus quis, efficitur viverra quam. Nam dolor mauris, ultrices eget imperdiet nec, vulputate et nulla. Curabitur a mauris orci. Nullam facilisis elit ipsum, vel mattis eros facilisis ut.',
         discount: 10,
         rating: 4,
-        image: 'https://i.postimg.cc/qqzvChk3/Straight-High-Split-Jeans.jpg'
+        image: 'https://i.postimg.cc/J0v43rnd/Straight-High-Ankle-Jeans.jpg'
     },
     {
         id: 8,
