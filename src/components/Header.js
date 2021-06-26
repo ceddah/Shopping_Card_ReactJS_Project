@@ -4,7 +4,7 @@ import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import {useGlobalContext} from '../context';
 
 const Header = () => {
-    const {cart} = useGlobalContext();
+    const {amount} = useGlobalContext();
 
     return (
         <header className="App__header">
@@ -18,7 +18,7 @@ const Header = () => {
                     <Link className="nav-links" to="/about_us">About Us</Link>
                     <Link to="/cart">
                         <ShoppingBasketIcon />
-                        <p className="cart_total">{cart.length}</p>
+                        <p className="cart_total">{amount}</p>
                     </Link>
                 </ul>
             </nav>

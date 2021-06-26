@@ -6,12 +6,12 @@ import RemoveIcon from '@material-ui/icons/Remove';
 const Cart = () => {
     const {
         cart,
+        total,
         removeItemFromCart,
         increaseAmount,
         decreaseAmount
     } = useGlobalContext();
-    //CHECKOUT Button / Clear Cart BTN
-    //Check to see if item is already in the cart if it is increase the amount
+
     const renderCartItems = () => {
         return cart.map(item => {
             return (
@@ -42,7 +42,7 @@ const Cart = () => {
                 <main className="cart__container">
                     {renderCartItems()}
                 </main>
-                <h5 className="total">Total: 0€</h5>
+                <h5 className="total">Total: {total}€</h5>
             </section>
         </div>
     )

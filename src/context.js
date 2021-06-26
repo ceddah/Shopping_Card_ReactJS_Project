@@ -14,7 +14,14 @@ const initialState = {
 const AppProvider = ({children}) => {
     const [state,dispatch] = useReducer(reducer, initialState);
 
-    const addItemToCart = (id) => dispatch({ type: 'ADD_ITEM', payload: id });
+    const addItemToCart = (id) => {
+        const newItem = state.cart.find(item => item.id === id);
+        if(state.cart.indexOf(newItem) === -1) {
+            dispatch({ type: 'ADD_ITEM', payload: id })
+        } else {
+            dispatch({ type: 'INCREASE_AMOUNT', payload: id }) 
+        }
+    };
 
     const removeItemFromCart = (id) => dispatch({ type: 'REMOVE_ITEM', payload: id });
 
