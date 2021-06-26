@@ -1,25 +1,29 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import {useGlobalContext} from '../context'; 
-//For items on sale I can sort items by discount and splice for first 3 items and display them
-const Home = () => {
-    const {shopItems} = useGlobalContext();
-    const bestDeals = shopItems
-        .sort((a,b) => a.discount > b.discount ? -1 : 1)
-        .splice(0, 3);
-    console.log(bestDeals)
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
-    const renderItems = () => {
-        return bestDeals.map(item => (
-            <article className="deal-item">
+const Home = () => {
+    const {shop} = useGlobalContext();
+    const bestDeals = shop
+        .sort((a,b) => a.discount > b.discount ? -1 : 1)
+        .slice(0, 3);
+
+    const renderFeaturedItems = () => {
+        return bestDeals.map((item,idx) => (
+            <article key={idx} className="deal-item">
                 <img src={item.image}  alt={item.title} />
+                <h2 className="deal-title">{item.discount}% on this Article</h2>
+                <Link to="/shop">
+                    <ShoppingCartIcon className="shop-now-icon" />
+                    Shop Now
+                </Link>
             </article>
         ))
     }
 
     return (
         <div className="home">
-            <img src="https://i.postimg.cc/sgZGN8Ch/Mom-High-Pleated-Jeans.jpg" alt="123"/>
             <div className="heading">
                 <h2>Season Sale</h2>
                 <Link to="/shop">Shop Now</Link>
@@ -27,7 +31,7 @@ const Home = () => {
             <section className="deals">
                 <h1 className="deals__title">Deals Of The Day</h1>
                 <main className="deals-container">
-                    {renderItems()}
+                    {renderFeaturedItems()}
                 </main>
             </section>
             <div className="shop-at_image">

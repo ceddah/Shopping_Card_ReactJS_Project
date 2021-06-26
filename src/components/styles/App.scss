@@ -135,5 +135,55 @@
                 letter-spacing: 0.1rem;
             }
         }
+
+        .deals-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            margin: 3rem 0 8rem;;
+
+            .deal-item {
+                width: 300px;
+                height: 570px;
+                justify-self: center;
+                text-align: center;
+                background-color: #f4f4f4;
+
+                .deal-title {
+                    color: rgb(48, 46, 46);
+                    margin: 0.5rem 0 1rem;
+                }
+
+                img {
+                    width: 300px;
+                    height: 450px;
+                    object-fit: cover;
+                }
+
+                a {
+                    color: #fff;
+                    display: flex;
+                    align-items: center;
+                    background-color: rgb(48, 46, 46);
+                    border: none;
+                    outline: none;
+                    padding: 8px 20px;
+                    border-radius: 4px;
+                    width: 150px;
+                    margin: 0 auto 1rem;
+
+                    &:hover {
+                        background-color: #212121;
+                    }
+
+                    .shop-now-icon {
+                        font-size: 20px;
+                        margin-right: 0.3rem;
+                    }
+                }
+            }
+        }
     }
 }

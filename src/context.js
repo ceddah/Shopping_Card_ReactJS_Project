@@ -6,6 +6,7 @@ const AppContext = React.createContext();
 
 const initialState = {
     cart: [],
+    shop: shopItems,
     total: 0,
     amount: 0
 };
@@ -15,7 +16,7 @@ const AppProvider = ({children}) => {
     
     return (
         <AppContext.Provider value={{
-            shopItems
+            ...state
         }}>
             {children}
         </AppContext.Provider>
