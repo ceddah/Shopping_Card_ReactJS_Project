@@ -1,0 +1,63 @@
+.shop {
+    &__banner {
+        background-image: url('https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
+        height: 50vh;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &__title {
+        padding: 3rem 5rem 0;
+        color: #353434;
+        font-size: 40px;
+    }
+
+    .p-text {
+        padding: 0 5rem;
+        margin: 0.5rem 0 3rem;
+        width: 70%;
+        font-size: 14px;
+        color: #555;
+        line-height: 22px;
+    }
+
+    &__container {
+        padding: 0 5rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: center;
+        gap: 0.5rem;
+
+        .shop-item {
+            width: 240px;
+            height: 400px;
+            justify-self: center;
+            margin-bottom: 3rem;
+            position: relative;
+
+            img {
+                width: 240px;
+                height: 360px;  
+            }
+
+            .item-details {
+                margin-top: 0.5rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-size: 16px;
+                color: #353434;
+
+                .star-icon {
+                    font-size: 16px;
+                    color: #F4BB44;
+                }
+            }
+            
+            .item-price {
+                margin-top: 0.5rem;
+            }
+        }
+    }
+}
